@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+// import { useState } from 'react';
 import './App.css';
+// import Example from './componenets/Example';
+import ChannelData from './componenets/Data/ChannelData';
+import PlayButtons from './componenets/Play-Pause/PlayButtons';
 
 function App() {
+  // let name = "Mazhar"
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>My_APP</h1>
+      <ChannelData/>
+      <PlayButtons  className="button" message="hi"  onPlay={()=>console.log("Play")} 
+       onPause={()=>console.log("pause")}>Play</PlayButtons>
+      {/* <PlayButtons className="button" message="hello" onPlay={()=>alert("pause")}>Pause</PlayButtons> */}
     </div>
   );
 }
